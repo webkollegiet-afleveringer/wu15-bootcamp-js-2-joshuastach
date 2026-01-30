@@ -4,8 +4,177 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<link rel="stylesheet" href="./css/style.css">
+	<title>document</title>
+	<style type="text/css">
+		 [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "some";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+
+		h1, h2, h3, h4, h5, h6 {
+	font-family: var(--font-secondaryFamily);
+}
+
+.sr-hidden {
+	display: none;
+}
+
+.primaryNavigation__navigationItem {
+	padding: 0 2em;
+}
+
+.primaryNavigation__navigationItem:first-of-type {
+	padding-left: 0;
+}
+
+.primaryNavigation__navigationItem:last-of-type {
+	padding-right: 0;
+}
+
+.article__img--big img {
+	width: 100%;
+	height: auto;
+}
+.article__img--big figcaption {
+	border-bottom: 1px solid lightgrey;
+	padding-bottom: .5em;
+	text-align: right;
+	font-style: italic;
+}
+
+.siteBrand {
+	font-size: 200%;
+	color: var(--color-primaryBrand);
+	text-decoration: none;
+	font-family: var(--font-secondaryFamily);
+	font-weight: 700;
+}
+
+  i[class^="icon-"] {
+	font-size: 200%;
+}
+}
+ 
+.icon-instagram:before { content: '\f16d'; } /* '' */
+.icon-twitter-squared:before { content: '\f304'; } /* '' */
+.icon-facebook-squared:before { content: '\f308'; } /* '' */
+
+body {
+	font-size: var(--font-size);
+	font-family: var(--font-primaryFamily);
+	color: var(--color-primaryForeground);
+	background-color: var(--color-primaryBackground);
+}
+
+.siteHeader {
+	border-bottom-style: solid;
+	border-bottom-width: 3px;
+	border-bottom-color: var(--color-primaryBrand);
+	padding: 3vw;
+	box-sizing: border-box;
+}
+
+.siteHeader nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.siteFooter {
+	padding: 1vh;
+	color: var(--color-primaryBackground);
+	background-color: var(--color-primaryForeground);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+:root {
+	--color-primaryBrand: hsl(0, 50%, 50%);
+
+	--color-primaryForeground: hsl(0, 0%, 7%);
+	--color-primaryBackground: hsl(0, 0%, 97%);
+
+	--font-size: calc(1em + (21 - 16) * (100vw - 412px) / (1920 - 412));
+	--font-primaryFamily: "Garamond", "Times New Roman", serif;
+	--font-secondaryFamily: Helvetica, Arial, Verdana, sans-serif;
+}
+
+.primaryNavigation {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.article__img--big {
+	width: 40vw;
+	height: auto;
+	margin: 0;
+	padding: 0;
+	float: right;
+	margin-left: 3em;
+	margin-bottom: 1em;
+}
+
+.siteFooter__some ul {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	margin-top: 1em;
+}
+body {
+	margin: 0;
+	display: grid;
+	grid-template-columns: 13vw auto 13vw;
+	grid-template-rows: 10vw auto 20vw;
+	grid-template-areas:
+		"header header header"
+		". main ."
+		"footer footer footer"
+}
+
+.siteHeader {
+	grid-area: header;
+}
+
+main {
+	grid-area: main;
+}
+
+.siteFooter {
+	grid-area: footer;
+}
+	</style>
+<link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 </head>
 <body>
 	<a href="#content" class="sr-hidden">Skip to content</a>
